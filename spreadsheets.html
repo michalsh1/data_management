@@ -40,8 +40,14 @@ Which based on
 - [Some Simple Guidelines for Effective Data Management](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205) by Elizabeth T. Borer, Eric W. Seabloom, Matthew B. Jones, and Mark Schildhauer
 - [5½ Reasons to Ditch Spreadsheets for Data Science: Code is Poetry](https://lucidmanager.org/spreadsheets-for-data-science/) by Peter Prevos
 
+---
+
+https://www.freshconsulting.com/development-principle-1-choose-appropriate-variable-names/
+
 
 ---
+      
+      
 # Keep raw data raw
 
 &gt;Always store an uncorrected data file with all its bumps and warts. Do not make any corrections to this file; make corrections within a scripted language. ([Borer et al. 2009](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205))
@@ -62,23 +68,6 @@ Separate tables into different sheets _or_ reorganize your data to fit into one 
 
 .pull-left[
 If you find yourself copying information a lot, consider reorganizing your data into separate tables (i.e. as a _relational database_).
-
-Single table:
-![](https://wol-prod-cdn.literatumonline.com/cms/attachment/a5ff59fc-0cba-40fb-a293-43576d2840cb/i0012-9623-90-2-205-t1011.jpg)
-]
-
-.pull-right[
-Sites:
-![](https://wol-prod-cdn.literatumonline.com/cms/attachment/c85e7ecf-5f7a-4b6b-929e-07242d21cb28/i0012-9623-90-2-205-t1012.jpg)
-
-Diseases:
-![](https://wol-prod-cdn.literatumonline.com/cms/attachment/4bf63d2a-04c2-4937-a1ad-54a5fda7d2e5/i0012-9623-90-2-205-t1013.jpg)
-]
-
----
-# Create a data dictionary
-
-![](img/data-dict.png)
 
 ---
 
@@ -116,10 +105,11 @@ Add an extra column if you need to!
 
 During analysis, some names are easier to deal with than others:
 
-- short but descriptive
-- lower case
-- no spaces
-- no special characters
+- avoiding short or ambiguous variable names such as “tmp,” “x,” etc.
+- short but descriptive. for example: "ThisPersonsFavoriteColor" vs. "favoriteColor"
+- no spaces, no special characters... instead:
+      _ , - , VariableName
+- be consistent 
 
 ---
 # Choose good names
@@ -151,14 +141,6 @@ tibble(`Field sites!` = c("A", "B", "B"),
 Excel dates depend on your operating system, Excel version, and locale. (_horror stories_: [1](https://uc3.cdlib.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/), [2](http://ecologybits.com/index.php/2016/07/06/beware-this-scary-thing-excel-can-do-to-your-data/), [3](https://practicaldatamanagement.wordpress.com/2014/07/02/dealing-with-dates-as-data-in-excel/)_)
 
 ![](https://datacarpentry.org/spreadsheet-ecology-lesson/fig/5_excel_dates_1.jpg)
-
---
-
-Avoid problems by:
-
-- separating dates into month, date, year columns
-- storing dates as year, day of year
-- storing dates as a single string YYYYMMDD or with underscores YYYY_MM_DD
 
 ---
 # QA your data
