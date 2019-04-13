@@ -66,8 +66,9 @@ Separate tables into different sheets _or_ reorganize your data to fit into one 
 ---
 # Don't repeat yourself (too much)
 
-.pull-left[
-If you find yourself copying information a lot, consider reorganizing your data into separate tables (i.e. as a _relational database_).
+If you find yourself copying information a lot,
+consider reorganizing your data into separate tables
+(i.e. as a _relational database_).
 
 ---
 
@@ -78,7 +79,7 @@ Use `NA`, `NULL`, or even `-` to represent missing values. Avoid numeric values 
 ![](img/blanks-bad.png)
 
  
-_Note:_ `fill()` from the `tidyr` package is a handy function for dealing with blanks in data
+`fill()` from the `tidyr` package is a handy function for dealing with blanks in data
 
 ---
 
@@ -163,6 +164,7 @@ Try the [data validation tool](https://support.office.com/en-us/article/apply-da
 ]
 
 ---
+
 # Be consistent!
 
 Make it easy for the machine, and the machine will make it easy for you!
@@ -171,78 +173,18 @@ Make it easy for the machine, and the machine will make it easy for you!
 
 ---
 
-- keep raw data raw
-- organize data as a single rectangle
-- don't repeat yourself (too much)
-- create a data dictionary
-- use NA, NULL, or - to represent missing values
-- don't use formatting to store information
-- enter ONE piece of information per cell
-- choose good names
-- beware of dates
-- QA your data
-- make backups
-- be consistent!
+My reccomandation: 
+  Primary key / ID
+      especially for relational data; joins (R); vlookups (excel)
 
 ---
-
 background-image: url(https://media.giphy.com/media/AhAysobj49aqQ/giphy.gif)
 background-position: center
 background-size: 100% auto
 
 ---
 
-# Exercise
+# Example xlsx
 
-Download the Excel file from [this dataset](https://github.com/weecology/portal-teachingdb/blob/master/survey_data_spreadsheet_messy.xls)
-
-- What problems do you see in the dataset?
-- How would you wrangle the data?
-- Read it into R ([readxl](https://readxl.tidyverse.org/)) and see what you can do
-    </textarea>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})();</script>
-
-<script>
-(function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-})();
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
   </body>
 </html>
